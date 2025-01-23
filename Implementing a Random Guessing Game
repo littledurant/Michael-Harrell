@@ -1,0 +1,44 @@
+
+Step1:
+Define the Game Logic
+The game involves generating a random number within a specified range and allowing the user to guess this number. The program provides feedback on whether the guess is too high, too low, or correct.
+
+
+Step2:
+Generate Random Number
+Use a random number generator to select a number within a predefined range (e.g., 1 to 100). This ensures that each game session starts with a different target number.
+
+
+Step3:
+User Input and Validation
+Prompt the user to input their guess. Validate the input to ensure it is numeric and within the specified range. If the input is invalid, prompt the user again.
+
+
+Step4:
+Compare Guess with Target
+Compare the user's guess to the randomly generated number. Provide feedback:
+
+"too high" if the guess is greater, "too low" if less, and "correct" if it matches.
+
+Step5:
+Repeat Until Correct
+Continue prompting the user for guesses until they correctly identify the number. Each incorrect guess should be followed by appropriate feedback.
+
+
+Step6:
+End Game
+Once the correct number is guessed, end the game and optionally provide the user with the option to play again or exit.
+
+A[Start] --> B[Generate Random Number]
+B --> C[Prompt User for Guess]
+C --> D{Is Input Valid?}
+D -- No --> C
+D -- Yes --> E{Compare Guess with Target}
+E -- Too High --> F[Feedback: Too High]
+E -- Too Low --> G[Feedback: Too Low]
+E -- Correct --> H[Feedback: Correct]
+F --> C
+G --> C
+H --> I{Play Again?}
+I -- Yes --> B
+I -- No --> J[End]
